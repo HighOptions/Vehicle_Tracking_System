@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run Command Example</title>
+  <script>
+    async function runCommand() {
+      try {
+        const response = await fetch('/run-command');
+        const result = await response.text();
+        alert('Command executed successfully:\n' + result);
+      } catch (error) {
+        alert('An error occurred while running the command.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="runCommand()">Run Command</button>
+</body>
+</html>
